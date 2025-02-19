@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لعبة إكس أو</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>X O game</h1>
+
+    <!-- Selection Container -->
+    <div class="selection-container">
+        <!-- Symbol Selection (Left Side) -->
+        <div class="symbol-selection">
+            <label>Choose the character</label>
+            <div class="radio-input">
+                <label class="label">
+                    <input type="radio" id="symbol-x" name="symbol-radio" value="X" checked />
+                    <span class="text">X</span>
+                </label>
+                <label class="label">
+                    <input type="radio" id="symbol-o" name="symbol-radio" value="O" />
+                    <span class="text">O</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Player Mode Selection (Right Side) -->
+        <div class="player-mode">
+            <label>Select player mode</label>
+            <div class="radio-input">
+                <label class="label">
+                    <input type="radio" id="mode-friend" name="mode-radio" value="friend" checked />
+                    <span class="text">Against friend</span>
+                </label>
+                <label class="label">
+                    <input type="radio" id="mode-computer" name="mode-radio" value="computer" />
+                    <span class="text">Against computer</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+    </div>
+
+    <p id="status"></p>
+    <div class="buttons">
+      <button class="btn" id="restart">
+        <span></span>
+        <p data-start="good luck!" data-text="start!" data-title="new game"></p>
+      </button>
+    </div>
+    
+    <script src="mine.js"></script>
+  </body>
+</html>
